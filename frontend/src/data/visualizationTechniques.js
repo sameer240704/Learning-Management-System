@@ -1,27 +1,23 @@
-import { FaChartLine, FaChartPie } from "react-icons/fa6";
-import { AiOutlineRadarChart } from "react-icons/ai";
-import { BiSolidDoughnutChart } from "react-icons/bi";
-import { FaChartBar } from "react-icons/fa";
-
 export const VisualizationTechniques = [
     {
-        name: "Line Chart",
-        icon: FaChartLine
+        name: "Bar Chart",
     },
     {
-        name: "Pie Chart",
-        icon: FaChartPie
-    },
-    {
-        name: "Radar Chart",
-        icon: AiOutlineRadarChart
+        name: "Bubble Chart",
     },
     {
         name: "Doughnut Chart",
-        icon: BiSolidDoughnutChart
     },
     {
-        name: "Bar Chart",
-        icon: FaChartBar
+        name: "Line Chart",
+    },
+    {
+        name: "Pie Chart",
+    },
+    {
+        name: "Radar Chart",
+    },
+    {
+        name: "Scatter Chart",
     },
 ]

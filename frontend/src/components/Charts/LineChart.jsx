@@ -17,18 +17,9 @@ const LineChart = () => {
         }]
     };
 
-    const options = {
-
-    };
-
     return (
-        <div className='h-full w-full bg-[#1f1f1f]'>
-            <Line
-                data={data}
-                options={options}
-            >
-
-            </Line>
+        <div className='h-4/5 w-4/5 bg-[#1f1f1f] rounded-xl p-5 flex justify-center items-center'>
+            <Line data={data} />
         </div>
     )
 }

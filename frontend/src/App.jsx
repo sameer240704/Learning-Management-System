@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Sidebar from './components/Sidebar';
 import { Assignments, Classmates, Dashboard, Leaderboard, Visualization  } from "./pages/index";
 import { SidebarStateProvider } from './hooks/useSidebarState';
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
@@ -17,6 +18,10 @@ function App() {
           <Route path='/visualization' element={<Visualization />} />
         </Routes>
       </BrowserRouter>
+      <Toaster
+        position="top-center"
+        reverseOrder={false}
+      />
     </SidebarStateProvider>
   )
 }
