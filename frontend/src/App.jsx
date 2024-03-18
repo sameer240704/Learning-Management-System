@@ -1,7 +1,7 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Sidebar from './components/Sidebar';
-import { Assignments, Classmates, Dashboard, Leaderboard, Visualization  } from "./pages/index";
+import { Assignments, Classmates, Home, Leaderboard, Courses, Visualization, Login, Register } from "./pages/index";
 import { SidebarStateProvider } from './hooks/useSidebarState';
 import { Toaster } from "react-hot-toast";
 
@@ -9,13 +9,15 @@ function App() {
   return (
     <SidebarStateProvider>
       <BrowserRouter>
-          <Sidebar />
         <Routes>
-          <Route path='/dashboard' element={<Dashboard />} />
-          <Route path='/leaderboard' element={<Leaderboard />} />
-          <Route path='/assignments' element={<Assignments />} />
-          <Route path='/classmates' element={<Classmates />} />
-          <Route path='/visualization' element={<Visualization />} />
+          <Route path='/home' element={<><Sidebar /><Home /></>} />
+          <Route path='/leaderboard' element={<><Sidebar /><Leaderboard /></>} />
+          <Route path='/assignments' element={<><Sidebar /><Assignments /></>} />
+          <Route path='/classmates' element={<><Sidebar /><Classmates /></>} />
+          <Route path='/courses' element={<><Sidebar /><Courses /></>} />
+          <Route path='/visualization' element={<><Sidebar /><Visualization /></>} />
+          <Route path='/' element={<Login />} />
+          <Route path='/register' element={<Register />} />
         </Routes>
       </BrowserRouter>
       <Toaster

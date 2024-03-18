@@ -5,19 +5,19 @@ import { LineChart, BubbleChart, DoughnutChart, BarChart, PieChart, RadarChart, 
 import { VisualizationTechniques } from '../data/visualizationTechniques.js';
 import { toast } from "react-hot-toast";
 import { IoCloseSharp } from "react-icons/io5";
-import { Line, Pie } from 'react-chartjs-2';
 
 const Visualization = () => {
   const { expanded } = useSidebarState();
   const [selectedTechnique, setSelectedTechnique] = useState(null);
   const [ modalState, setModalState ] = useState(false);
+  
+  console.log(typeof selectedTechnique);
 
   const handleTechniqueChange = (technique) => {
     setSelectedTechnique(technique);
   };
 
   const handleSelectButton = () => {
-    console.log(modalState);
     if(selectedTechnique === null) {
       toast.error("No visualization technique selected!")
     }
@@ -81,13 +81,13 @@ const Visualization = () => {
             >
               <IoCloseSharp className='h-10 w-10 text-red-400 hover:text-red-700'/>
             </button>
-            {/* <BarChart /> */}
-            {/* <BubbleChart /> */}
-            {/* <DoughnutChart /> */}
-            {/* <LineChart /> */}
-            {/* <PieChart /> */}
-            {/* <RadarChart /> */}
-            <ScatterChart />
+            {selectedTechnique === "Line Chart" && <LineChart />}
+            {selectedTechnique === "Bubble Chart" && <BubbleChart />}
+            {selectedTechnique === "Doughnut Chart" && <DoughnutChart />}
+            {selectedTechnique === "Bar Chart" && <BarChart />}
+            {selectedTechnique === "Pie Chart" && <PieChart />}
+            {selectedTechnique === "Radar Chart" && <RadarChart />}
+            {selectedTechnique === "Scatter Chart" && <ScatterChart />}
           </div>
         )}
       </div>

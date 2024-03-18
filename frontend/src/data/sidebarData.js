@@ -1,14 +1,14 @@
 // sidebarData.js
 
-import { MdLeaderboard, MdAssignment, MdDashboard } from "react-icons/md";
-import { FaChartArea } from "react-icons/fa";
+import { MdLeaderboard, MdAssignment } from "react-icons/md";
+import { FaChartArea, FaHome } from "react-icons/fa";
 import { IoPeopleSharp } from "react-icons/io5";
 
 export const sidebarData = [
   {
-    name: "Dashboard",
-    icon: MdDashboard,
-    links: "/dashboard"
+    name: "Home",
+    icon: FaHome,
+    links: "/home"
   },
   {
     name: "Leaderboard",
@@ -24,6 +24,11 @@ export const sidebarData = [
     name: "Assignments",
     icon: MdAssignment,
     links: "/assignments"
+  },
+  {
+    name: "Courses",
+    icon: MdAssignment,
+    links: "/courses"
   },
   {
     name: "Visualization",

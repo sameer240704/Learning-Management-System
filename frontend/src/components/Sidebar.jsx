@@ -23,7 +23,7 @@ export default function Sidebar() {
             alt=""
           />
           <button
-            onClick={() => setExpanded((curr) => !curr)}
+            onClick={() => setExpanded((current) => !current)}
             className="p-1.5 rounded-lg bg-transparent hover:bg-blue-500"
           >
             {expanded ? <ChevronFirst /> : <ChevronLast />}
