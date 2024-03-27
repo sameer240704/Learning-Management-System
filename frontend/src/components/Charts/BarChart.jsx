@@ -9,8 +9,8 @@ const BarChart = () => {
     labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
     datasets: [{
         label: 'Weekdays',
-        data: [30, 18, 98, 43, 78, 12, 90],
-        borderColor: "yellow",
+        data: [30, 18, 98, 43, 89, 12, 90],
+        borderColor: "blue",
         backgroundColor: ["green", "red"],
         borderWidth: 1
     }]
@@ -18,8 +18,8 @@ const BarChart = () => {
 
   return (
     <div className='h-4/5 w-4/5 bg-[#1f1f1f] rounded-xl p-5 flex justify-center items-center'>
-          <Bar data={data} />
-      </div>
+      <Bar data={data} />
+    </div>
   )
 }
 

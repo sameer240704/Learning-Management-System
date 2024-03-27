@@ -1,7 +1,7 @@
 import React from "react";
 import { useSidebarState } from "../hooks/useSidebarState";
 
-const Courses = () => {
+const Calendar = () => {
   const { expanded } = useSidebarState();
 
   return (
@@ -9,9 +9,9 @@ const Courses = () => {
       className="courses-container absolute top-0"
       style={{ left: expanded ? "20vw" : "4vw" }}
     >
-      <h1>Courses</h1>
+      <h1>Calendar</h1>
     </div>
   );
 };
 
-export default Courses;
+export default Calendar;

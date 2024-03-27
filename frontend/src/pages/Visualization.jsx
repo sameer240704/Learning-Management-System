@@ -11,7 +11,6 @@ const Visualization = () => {
   const [selectedTechnique, setSelectedTechnique] = useState(null);
   const [ modalState, setModalState ] = useState(false);
   
-  console.log(typeof selectedTechnique);
 
   const handleTechniqueChange = (technique) => {
     setSelectedTechnique(technique);
@@ -19,7 +18,7 @@ const Visualization = () => {
 
   const handleSelectButton = () => {
     if(selectedTechnique === null) {
-      toast.error("No visualization technique selected!")
+      toast.error("No visualization technique selected!");
     }
     else {
       setModalState(true);
